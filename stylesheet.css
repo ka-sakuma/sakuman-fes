@@ -44,3 +44,22 @@ body {
 .top-page img:last-child{
   animation: loop2 50s linear infinite;
 }
+
+.main{
+  text-align: center;
+}
+
+.footer-page{
+  text-align: center;
+}
+
+.fotter-top{
+  max-width: 50%;
+}
+
+.profile-img{
+  height: 300px;
+  width: 300px;
+  float: left;
+  text-align: center;
+}
