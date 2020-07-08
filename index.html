@@ -6,52 +6,80 @@
   <title>佐久間のページ</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style type="text/css">
+    #photo {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
+    }
+    #photo img {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    </style>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var setImg = '#photo';
+        var fadeSpeed = 1600;
+        var switchDelay = 5000;
+    
+        $(setImg).children('img').css({opacity:'0'});
+        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+    
+        setInterval(function(){
+            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        },switchDelay);
+    });
+    </script>
+    
 </head>
 <body>
   <header>
     <div class="header">     
       <div class="top-page">
-        
-        <img src="top.png" alt="">
-        <img src="top2.JPG" alt="">
-    
-      </div>
+      <h1>Wedding</h1>
+    </div>
     </div>
   </header>
 
   <div class="main">
-    <h1>回答フォームはこちら</h1>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWJK5fs1VD6Q-qjNA0FoS3-KLanvfsg28UfYQYA2KfYRFiDA/viewform" width="600" height="600"></iframe>
+   <div class="main-page">
+    <h1>Main Menu</h1>
+   </div>
+   <div class="item">
+     <div class="profile">
+       <h1>プロフィール</h1>
+     </div>
+   </div>
+   <div class="item">
+     <h1>出欠連絡</h1>
+   </div>
+   <div class="item">
+     <h1>accces</h1>
+   </div>
+   <div class="item">
+     <h1>photo</h1>
+   </div>
+   <div id="photo">
+    <img src="top.png" width="500" height="300" alt="">
+    <img src="top1.JPG" width="500" height="300" alt="">
+    <img src="top2.JPG" width="500" height="300" alt="">
+    <img src="top3.JPG" width="500" height="300" alt="">
+    </div>
+ 
+
   </div>
-  <div class="lesson-wrapper">
-  </div>
-  <div class="message-wrapper">
+  <div class="main-body">
   </div>
   <footer>
-    <div class="footer-page">
-      <div class="footer-top">
-        <h1>二人のプロフィール</h1>
-      </div>
-      <div class="profile-img">
-        <img src="saku-profile.jpg" alt="">
-        <h2>名前</h2>
-        <p>sakuma</p>
-        <h2>出身</h2>
-        <p>東京都大田区</p>
-        <h2>趣味</h2>
-        <p>野球、お酒を飲む、<br>ボウリング、ダジャレ</p>
-      </div>
-      <div class="profile-img">
-        <img src="yuuna-img.jpg" alt="">
-        <h2>名前</h2>
-        <p>shima</p>
-        <h2>出身</h2>
-        <p>東京都江戸川区</p>
-        <h2>趣味</h2>
-        <p>ジャニーズ、カラオケ</p>
-      </div>
     
-    </div>
+    
   </footer>
 </body>
 </html>
