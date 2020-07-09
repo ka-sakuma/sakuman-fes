@@ -7,47 +7,16 @@ body {
   font-family: "Hiragino Kaku Gothic ProN";
 }
 
-.top-page {
-  display: flex;
-  width: 100vw;
-  height: 300px;
-  overflow: hidden;
-}
-
-.top-page img {
-  width: auto;
-  height: 100%;
-}
-
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes loop2{
-  0% {
-    transform: translateX(0%);
-  }
-  to{
-    transform: translateX(-200%);
-  }
-}
-
-.top-page img:first-child{
-  animation: loop 50s -25s linear infinite;
-}
-
-.top-page img:last-child{
-  animation: loop2 50s linear infinite;
+.header{
+  text-align: center;
+  height: 100px;
+  margin: 10px;
 }
 
 .main{
-  text-align: center;
+  float: left;
 }
+
 
 .footer-page{
   text-align: center;
@@ -55,11 +24,4 @@ body {
 
 .fotter-top{
   max-width: 50%;
-}
-
-.profile-img{
-  height: 300px;
-  width: 300px;
-  float: left;
-  text-align: center;
 }
