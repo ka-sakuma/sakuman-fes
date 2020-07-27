@@ -7,16 +7,12 @@ body {
   font-family: "Hiragino Kaku Gothic ProN";
 }
 
-.header{
+.top-page{
   text-align: center;
-  height: 100px;
+  height: 500px;
+  width: auto;
   margin: 10px;
 }
-
-.main{
-  float: left;
-}
-
 
 .footer-page{
   text-align: center;
@@ -24,4 +20,9 @@ body {
 
 .fotter-top{
   max-width: 50%;
+}
+
+.main{
+  text-align: center;
+  float: left;
 }
